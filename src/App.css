@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  font-size: 14px;
+}
+
+/* TOP HEADER */
+.cdod-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cdod-header img {
+  height: 48px;
+  margin-right: 12px;
+}
+
+.cdod-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* PAGE */
+.page {
+  padding: 60px;
+}
+
+.page-title {
+  color: #e53935;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* BLOCK – NMIMS STYLE */
+.block {
+  background: linear-gradient(to bottom, #ffffff 0%, #fbfbfb 100%);
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1.3px solid #ededed;
+  border-radius: 4px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* HERO BADGE BLOCK */
+.badge-block {
+  position: relative;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.12),
+    0 14px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* ISSUED BY – EXACT NMIMS POSITION */
+.issued-fixed {
+  position: absolute;
+  top: 24px;           /* aligns with title top */
+  right: 300px;         /* matches NMIMS padding */
+  text-align: right;
+}
+
+.issued-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.2;
+}
+
+.issued-value {
+  margin-top: 25px;
+  font-size: 16px;
+  font-weight: 580;
+  color: #e53935;
+}
+
+/* BADGE LAYOUT */
+.badge-layout {
+  display: flex;
+  gap: 28px;
+}
+
+.badge-left img {
+  width: 200px;
+}
+
+.badge-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.badge-content p {
+  font-weight: 350;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+/* CLAIMED – OFFICIAL TEAL */
+.claimed {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  color: #009688;
+  font-weight: 600;
+}
+
+.claimed-circle {
+  width: 28px;
+  height: 28px;
+  background: #009688;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+/* SECTIONS */
+.section-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  width: 260px;
+  font-weight: 600;
+}
+
+.section-sub {
+  color: #666;
+}
+
+/* FOOTER BUTTON */
+.final-btn {
+  background: #e53935;
+  color: #ffffff;
+
+  padding: 8px 16px;          /* tighter like original */
+  font-size: 14px;
+  font-weight: 500;
+
+  border: none;
+  border-radius: 6px;         /* subtle, not pill */
+  cursor: pointer;
+
+  text-decoration: none;      /* no underline */
+  display: inline-block;
+
+  box-shadow: none;           /* ❌ no shadow */
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.final-btn:hover,
+.final-btn:focus,
+.final-btn:active,
+.final-btn:visited {
+  color: #ffffff;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* NOTE – PIXEL MATCH */
+.note {
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.note strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 20px;
+  font-weight: 580;
+  color: #000;
+}
+
+.note {
+  
+  color: #d32f2f;
+  font-size: 14.4px;
+  font-weight: 580;
+}
+
+.note a {
+  color: #1565c0;
+  text-decoration: none;
+}

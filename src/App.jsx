@@ -109,7 +109,7 @@ export default function App() {
 
 
         <a
-  href="https://dicqz6046l7co.cloudfront.net/Certificates/Certificate_Self_77219855796_09-Aug-2024_hZ9hq.pdf"
+  href="certs/Certificate_Self_77219855796_09-Aug-2023_hZ9hq .pdf"
   target="_blank"
   rel="noopener noreferrer"
   className="final-btn"

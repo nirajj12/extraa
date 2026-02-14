@@ -14,12 +14,6 @@ export default function App() {
 
         {/* BADGE BLOCK */}
         <div className="block badge-block">
-          {/* ISSUED BY (FIXED RIGHT) */}
-          <div className="issued-fixed">
-            <div className="issued-label">Issued By:</div>
-            <div className="issued-value">NCDOE</div>
-          </div>
-
           <div className="badge-layout">
             <div className="badge-left">
               <img
@@ -47,6 +41,12 @@ export default function App() {
               <div className="claimed">
                 <div className="claimed-circle">✓</div>
                 CLAIMED
+              </div>
+
+              {/* ISSUED BY (FIXED RIGHT ON DESKTOP, BELOW CLAIMED ON MOBILE) */}
+              <div className="issued-fixed">
+                <div className="issued-label">Issued By:</div>
+                <div className="issued-value">NCDOE</div>
               </div>
             </div>
           </div>

@@ -1,23 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background: #f2f2f2;
   color: #333;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 /* TOP HEADER */
 .cdod-header {
   display: flex;
   align-items: center;
-  padding: 12px 24px;
+  padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 24px);
   background: #ffffff;
   border-bottom: 1px solid #e0e0e0;
+  gap: 12px;
 }
 
 .cdod-header img {
-  height: 48px;
-  margin-right: 12px;
+  height: clamp(40px, 6vw, 56px);
+  max-width: 100%;
 }
 
 .cdod-text {
@@ -27,12 +35,12 @@ body {
 
 /* PAGE */
 .page {
-  padding: 60px;
+  padding: clamp(16px, 5vw, 60px);
 }
 
 .page-title {
   color: #e53935;
-  font-size: 24px;
+  font-size: clamp(18px, 2.6vw, 24px);
   font-weight: 600;
   margin-bottom: 16px;
 }
@@ -40,7 +48,7 @@ body {
 /* BLOCK – NMIMS STYLE */
 .block {
   background: linear-gradient(to bottom, #ffffff 0%, #fbfbfb 100%);
-  padding: 24px;
+  padding: clamp(16px, 3.5vw, 24px);
   margin-bottom: 24px;
   border: 1.3px solid #ededed;
   border-radius: 4px;
@@ -59,10 +67,9 @@ body {
 
 /* ISSUED BY – EXACT NMIMS POSITION */
 .issued-fixed {
-  position: absolute;
-  top: 24px;           /* aligns with title top */
-  right: 300px;         /* matches NMIMS padding */
-  text-align: right;
+  position: static;
+  text-align: left;
+  margin-bottom: 12px;
 }
 
 .issued-label {
@@ -82,15 +89,22 @@ body {
 /* BADGE LAYOUT */
 .badge-layout {
   display: flex;
-  gap: 28px;
+  gap: clamp(16px, 3vw, 28px);
+  align-items: flex-start;
+}
+
+.badge-content {
+  min-width: 0;
 }
 
 .badge-left img {
-  width: 200px;
+  width: clamp(160px, 28vw, 225px);
+  max-width: 100%;
+  height: auto;
 }
 
 .badge-content h2 {
-  font-size: 22px;
+  font-size: clamp(18px, 2.4vw, 22px);
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 8px;
@@ -100,6 +114,8 @@ body {
   font-weight: 350;
   line-height: 1.4;
   margin-bottom: 4px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* CLAIMED – OFFICIAL TEAL */
@@ -127,17 +143,68 @@ body {
 /* SECTIONS */
 .section-row {
   display: flex;
-  gap: 40px;
+  gap: clamp(16px, 4vw, 40px);
   margin-bottom: 8px;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .section-title {
-  width: 260px;
+  width: clamp(160px, 30vw, 260px);
   font-weight: 600;
 }
 
 .section-sub {
   color: #666;
+}
+
+/* BUTTON */
+.final-btn {
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (min-width: 769px) {
+  .issued-fixed {
+    position: absolute;
+    top: 24px;
+    right: clamp(16px, 4vw, 32px);
+    text-align: right;
+    margin-bottom: 0;
+    max-width: 160px;
+  }
+
+  /* reserve space so issued-by never overlaps text */
+  .badge-layout {
+    padding-right: clamp(140px, 22vw, 220px);
+  }
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+  .issued-fixed {
+    right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .badge-layout {
+    flex-direction: column;
+  }
+
+  .section-title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    margin-bottom: 12px;
+  }
+
+  .block {
+    margin-bottom: 16px;
+  }
 }
 
 /* FOOTER BUTTON */
